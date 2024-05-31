@@ -1,4 +1,8 @@
 # Truth Table Generator
+<p float="center">
+  <img src="images/pic1.png" alt="Example 1" width="45%" />
+  <img src="images/pic2.png" alt="Example 2" width="45%" />
+</p>
 This is a simple yet powerful Truth Table Generator that can handle complex logical expressions. It supports various logical operators such as → (implication), ↔ (equivalence), ∧ (conjunction), ∨ (disjunction), and ~ (negation). The tool also automatically detects and handles parentheses in the input expression.
 
 ## Features
@@ -6,6 +10,26 @@ This is a simple yet powerful Truth Table Generator that can handle complex logi
 + Supports various logical operators: →, ↔, ∧, ∨, and ~
 + Automatically detects and handles parentheses in the input expression
 + User-friendly interface with colored notifications and terminal clearing
+
+## Installation
+Follow these steps to set up the project:
+
+1. Clone the repository
+```bash
+git clone https://github.com/username/repo.git
+```
+2. Open directory
+```bash
+cd Truth-Table
+```
+3. Install the dependencies
+```bash
+pip install -r requirements.txt
+```
+4. Run 
+```bash
+python main.py
+```
 
 ## Usage
 + Run the script to start the Truth Table Generator.
@@ -27,4 +51,4 @@ Suppose you want to generate a truth table for the expression (p∧q)→p. Here'
 | F | F | F | T |
 
 ## License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+This project is licensed under the MIT License - see the LICENSE.md file for details
