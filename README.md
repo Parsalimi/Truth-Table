@@ -51,4 +51,4 @@ Suppose you want to generate a truth table for the expression (p∧q)→p. Here'
 | F | F | F | T |
 
 ## License
-This project is licensed under the MIT License - see the LICENSE.md file for details
+This project is licensed under the MIT License
