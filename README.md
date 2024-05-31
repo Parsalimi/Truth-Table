@@ -13,10 +13,10 @@ This is a simple yet powerful Truth Table Generator that can handle complex logi
 + The script will then generate the truth table for the given expression, displaying the results in a clear and easy-to-understand format.
 
 ## Example
-Suppose you want to generate a truth table for the expression (A ∧ B) → C. Here's how you can do it:
+Suppose you want to generate a truth table for the expression (p∧q)→p. Here's how you can do it:
 
 1. Run the script.
-2. Enter the expression as (A∧B)→C.
+2. Enter the expression as (p∧q)→p.
 3. The script will generate the truth table, displaying the results like this:
 
 | p | q | p∧q | (p∧q)→p |
