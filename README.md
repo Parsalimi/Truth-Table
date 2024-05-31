@@ -20,7 +20,7 @@ Suppose you want to generate a truth table for the expression (A ∧ B) → C. H
 3. The script will generate the truth table, displaying the results like this:
 
 | p | q | p∧q | (p∧q)→p |
-| - | - | --- | -------- |
+| :-: | :-: | :-: | :-: |
 | T | T | T | T |
 | T | F | F | F |
 | F | T | F | T |
