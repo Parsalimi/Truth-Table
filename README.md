@@ -3,6 +3,7 @@
   <img src="images/pic1.png" alt="Example 1" width="25%" />
   <img src="images/pic2.png" alt="Example " width="55%" />
 </p>
+This project was developed as part of my coursework for the “Basics of Mathematical Science” course at IAU SRB. Inspired by the fundamental concepts of logic and Boolean algebra, I created this truth table generator from scratch, without relying on any external modules or libraries. The goal was to deepen my understanding of logical operations, truth values, and the systematic representation of logical expressions.
 This is a simple yet powerful Truth Table Generator that can handle complex logical expressions. It supports various logical operators such as → (implication), ↔ (equivalence), ∧ (conjunction), ∨ (disjunction), and ~ (negation). The tool also automatically detects and handles parentheses in the input expression.
 
 ## Features
