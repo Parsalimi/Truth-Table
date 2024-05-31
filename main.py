@@ -1,12 +1,11 @@
 from tools import *
+from prettytable import PrettyTable
 # → ← ⇐ ⇒ ⇔ ↔ ≡ ∧ ∨
 
 lowercase = 'abcdefghijklmnopqrstuvwxyz'
 
 class Main:
-    #equation = ['r','∨','(','p','↔', 'q',')','∧','r']
-    #equation = ['p','↔','q','∧','p']
-    equation = ['r','∨','r']
+    equation = []
     table = []
 
 # This Function is to Check How many variable used in the entry
@@ -43,6 +42,22 @@ def CountParentheses():
         print(ColoredNotification(f"You have opened: {openParenthesesCounter} Parentheses and Closed {closeParenthesesCounter}", "red"))
         Wait()
 
+def PrintFinalTable():
+    table = PrettyTable()
+    table.field_names = [i[0] for i in Main.table]
+    for i in range(len(Main.table[0][1])):
+        row = [j[1][i] for j in Main.table]
+        colored_row = []
+        for cell in row:
+            if cell == 'T':
+                colored_row.append(ColoredNotification(cell, 'green'))
+            elif cell == 'F':
+                colored_row.append(ColoredNotification(cell, 'red'))
+            else:
+                colored_row.append(cell)
+        table.add_row(colored_row)
+    print(table)
+
 def AddParenthesesToTable():
     for index, item in enumerate(Main.equation):
         if item == ')':
@@ -53,6 +68,7 @@ def AddParenthesesToTable():
                     for j in range(0, lenght-1):
                         Main.equation.pop(i)
                     Main.equation[i] = f'({result[0]})'
+                    break
 
  # Remove the Outest Parentheses
 def RemoveOutestParenthese(entry: str):
@@ -62,6 +78,12 @@ def RemoveOutestParenthese(entry: str):
     return entry
 
 def AddToTable(Eq: list):
+    ### PRIORITY ###
+    # ( ... )
+    # ~
+    # ∧ ∨
+    # → ↔
+
     index = 0
     while index < len(Eq):
         if Eq[index] == "~":
@@ -200,31 +222,24 @@ def AddToTable(Eq: list):
                     
     return Eq
 
-# MAIN PROGRAM #
+
+####################
+### MAIN PROGRAM ###
+####################
+
 flag = True
 while flag:
     ClearTerminal()
-    print(ColoredNotification("→ ↔ ∧ ∨ ~", "green"))
-    # entry = input("Please enter: ")
-    # entry = entry.replace(" ", "") # remove gaps
-    # Main.equation = list(entry)
-    # How many variable
-
-
-    ### PRIORITY ###
-    # ( ... )
-    # ~
-    # ∧ ∨
-    # → ↔
-
+    print(ColoredNotification("TRUTH TABLE\nCopy these if Needed: → ↔ ∧ ∨ ~", 'cyan'))
+    entry = input("Please enter: ")
+    entry = entry.replace(" ", "") # remove gaps
+    Main.equation = list(entry)
     VariableTables()
     for round in range(0, CountParentheses()):
         AddParenthesesToTable()
     while len(Main.equation) > 1:
         result = AddToTable(Main.equation)
         Main.equation = result
-    
-    print(Main.table)
-    print(Main.equation)
+    PrintFinalTable()
     Wait()
 
