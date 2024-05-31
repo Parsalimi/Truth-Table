@@ -2,6 +2,7 @@
 <p float="center">
   <img src="images/pic1.png" alt="Example 1" width="45%" />
   <img src="images/pic2.png" alt="Example 2" width="45%" />
+  <img src="images/pic3.png" alt="Example 3" width="45%" />
 </p>
 This is a simple yet powerful Truth Table Generator that can handle complex logical expressions. It supports various logical operators such as → (implication), ↔ (equivalence), ∧ (conjunction), ∨ (disjunction), and ~ (negation). The tool also automatically detects and handles parentheses in the input expression.
 
